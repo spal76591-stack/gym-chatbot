@@ -6,7 +6,7 @@ import os
 app = Flask(__name__, static_folder='static')
 
 client = OpenAI(
-    api_key="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",
+    api_key=os.environ.get("NVIDIA_API_KEY"),
     base_url="https://integrate.api.nvidia.com/v1"
 )
 
